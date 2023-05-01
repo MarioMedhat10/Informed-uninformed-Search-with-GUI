@@ -2,41 +2,41 @@ import pyswip
 import tkinter as tk
 from PIL import ImageTk,Image
 
-class GameGUI:
+class Game:
 
     def __init__(self, master):
         self.master = master
-        self.master.title("Game GUI")
+        self.master.title("Uninformed Search Game")
         
         # create input widgets
         self.row_label = tk.Label(self.master, text="Number of Rows:")
         self.row_label.grid(row=0, column=0)
-        self.row_entry = tk.Entry(self.master)
+        self.row_entry = tk.Entry(self.master,width=40,justify='center')
         self.row_entry.grid(row=0, column=1)
         
         self.col_label = tk.Label(self.master, text="Number of Columns:")
         self.col_label.grid(row=1, column=0)
-        self.col_entry = tk.Entry(self.master)
+        self.col_entry = tk.Entry(self.master,width=40,justify='center')
         self.col_entry.grid(row=1, column=1)
 
         self.b1x_label = tk.Label(self.master, text="Bomb 1 Row:")
         self.b1x_label.grid(row=2, column=0)
-        self.b1x_entry = tk.Entry(self.master)
+        self.b1x_entry = tk.Entry(self.master,width=40,justify='center')
         self.b1x_entry.grid(row=2, column=1)
 
         self.b1y_label = tk.Label(self.master, text="Bomb 1 Column:")
         self.b1y_label.grid(row=3, column=0)
-        self.b1y_entry = tk.Entry(self.master)
+        self.b1y_entry = tk.Entry(self.master,width=40,justify='center')
         self.b1y_entry.grid(row=3, column=1)
 
         self.b2x_label = tk.Label(self.master, text="Bomb 2 Row:")
         self.b2x_label.grid(row=4, column=0)
-        self.b2x_entry = tk.Entry(self.master)
+        self.b2x_entry = tk.Entry(self.master,width=40,justify='center')
         self.b2x_entry.grid(row=4, column=1)
 
         self.b2y_label = tk.Label(self.master, text="Bomb 2 Column:")
         self.b2y_label.grid(row=5, column=0)
-        self.b2y_entry = tk.Entry(self.master)
+        self.b2y_entry = tk.Entry(self.master,width=40,justify='center')
         self.b2y_entry.grid(row=5, column=1)
 
         # create run button
@@ -91,5 +91,5 @@ class GameGUI:
 
 # create the main window
 root = tk.Tk()
-game_gui = GameGUI(root)
+game_gui = Game(root)
 root.mainloop()
